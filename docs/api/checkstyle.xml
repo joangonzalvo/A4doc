@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="Helper.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+  </file>
+  <file name="DB.php">
+    <error line="28" severity="error" message="No summary for method getInstance()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="37" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="56" severity="error" message="Name of argument $sql does not match with the DocBlock's name $e in query()" source="phpDocumentor.file.PPC:ERR-50014"/>
+    <error line="56" severity="notice" message="Parameter $e could not be found in query()" source="phpDocumentor.file.PPC:ERR-50013"/>
+    <error line="24" severity="error" message="No summary for property $stmt" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $_instance" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+</checkstyle>
