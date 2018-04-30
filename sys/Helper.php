@@ -15,7 +15,10 @@ namespace App\Sys;
  */
 class Helper {
     
-    
+	/**
+	* Helper per descodificar el json de configuració
+	* @return array
+	*/
     static function getConfig(){
         
         return (array) json_decode(file_get_contents(CONF));

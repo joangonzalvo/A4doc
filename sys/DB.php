@@ -16,6 +16,9 @@ require 'Helper.php';
 
 use App\Sys\Helper;
 
+/**
+* Class per preparar sentencies preparades i executarles
+*/
 class DB extends \PDO{
 
     private $stmt;
@@ -46,7 +49,10 @@ class DB extends \PDO{
          
         }
 
-
+/**
+* Prepara la query enviada desde index.php
+* @param string $e
+*/
     public function query($sql){
         try{
             $this->stmt=$this->prepare($sql);
@@ -54,11 +60,11 @@ class DB extends \PDO{
             echo $e->getMessage();
         }
     }
-    /**
-     *  Binds statement with variables
-     * @param string $param
-     * @param string $value
-     */
+  /**
+    * Uneix la sentencia preparada amb les variables
+    * @param string $param
+    * @param string $value
+    */
     public function bind($param,$value){
         switch(true){
             case is_int($value):
@@ -92,7 +98,10 @@ class DB extends \PDO{
     function resultSet(){
         return $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
-    
+/**
+* Use only after execute()
+* @return string
+*/
     function single(){
         return $this->stmt->fetch(\PDO::FETCH_ASSOC);
     }

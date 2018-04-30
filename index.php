@@ -1,5 +1,8 @@
 <?php
-
+	/**
+	*	A summary informing the user what the associated element does
+	*	Index.php makes test of the data base.
+	*/
     require 'sys/DB.php';
     define('CONF',__DIR__.'/Config.json');
       
